@@ -1,0 +1,51 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/* Estilos para os blocos */
+.box {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* Break Point para 1280px (6 colunas) */
+@media (min-width: 1280px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Break Point para 768px (3 colunas) */
+@media (min-width: 768px) and (max-width: 1279px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Break Point para 480px (2 colunas) */
+@media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Break Point para menos de 480px (1 coluna) */
+@media (max-width: 479px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
